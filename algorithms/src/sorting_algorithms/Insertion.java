@@ -1,4 +1,4 @@
-package algorithms.sorting_algorithms;
+package sorting_algorithms;
 
 import java.util.Arrays;
 
@@ -7,7 +7,9 @@ public class Insertion {
         int[] arr = {5, 4, 3, 2, 1,};
         insertion(arr);
         System.out.println(Arrays.toString(arr));
+
     }
+
 
     static void insertion(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
