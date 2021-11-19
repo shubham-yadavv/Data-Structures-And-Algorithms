@@ -6,9 +6,16 @@ public class Main {
     public static void main(String[] args) {
         LL list = new LL();
         list.insertFirst(8);
-        list.insertFirst(3);
+        list.insertFirst(32);
         list.insertFirst(5);
-        list.insertFirst(9);
+        list.insertFirst(92);
+
+
+        list.insertLast(9);
+        list.insertLast(3);
+        list.insertLast(87);
+
+        list.insert(22,3);
 
         list.display();
 

@@ -20,6 +20,36 @@ public class LL {
         }
         size += 1;
     }
+    public void insertLast(int val){
+        if (tail == null){
+            insertFirst(val);
+            return;
+        }
+
+        Node node = new Node(val);
+        tail.next= node;
+        tail = node;
+        size++;
+    }
+
+    public void insert(int val, int index){
+        if (index == 0){
+            insertFirst(val);
+            return;
+        }
+        if (index == size){
+            insertLast(val);
+            return;
+        }
+        Node temp = head;
+        for (int i = 1; i < index ; i++) {
+            temp = temp.next;
+        }
+        Node node = new Node(val,temp.next);
+        temp.next = node;
+        size++;
+        
+    }
 
     public void display(){
         Node temp = head;
@@ -45,4 +75,24 @@ public class LL {
             this.next = next;
         }
     }
+
+
+
+//    public static void main(String[] args) {
+//        LL list = new LL();
+//        list.insertFirst(8);
+//        list.insertFirst(32);
+//        list.insertFirst(5);
+//        list.insertFirst(92);
+//
+//
+//        list.insertLast(9);
+//        list.insertLast(3);
+//        list.insertLast(87);
+//
+//        list.display();
+//
+//    }
 }
+
+
