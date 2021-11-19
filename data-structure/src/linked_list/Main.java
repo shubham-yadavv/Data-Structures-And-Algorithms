@@ -4,10 +4,13 @@ import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<>();
-        list.add(43);
-        list.add(7);
-        list.add(90);
-        System.out.println(list);
+        LL list = new LL();
+        list.insertFirst(8);
+        list.insertFirst(3);
+        list.insertFirst(5);
+        list.insertFirst(9);
+
+        list.display();
+
     }
 }
