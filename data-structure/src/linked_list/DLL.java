@@ -3,7 +3,7 @@ package linked_list;
 public class DLL {
     private Node head;
 
-    public void insertFirst(int val) {
+    public void insertFirst(int val) {      // insert  node at first
         Node node = new Node(val);
         node.next = head;
         node.prev = null;
