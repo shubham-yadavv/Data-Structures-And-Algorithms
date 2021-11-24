@@ -10,7 +10,7 @@ public class LL {
         this.size = 0;
     }
 
-    public void insertFirst(int val) {
+    public void insertFirst(int val) {      // insert node at first
         Node node = new Node(val);
         node.next = head;
         head = node;
@@ -21,7 +21,7 @@ public class LL {
         size += 1;
     }
 
-    public void insertLast(int val) {
+    public void insertLast(int val) {       // inser node at last
         if (tail == null) {
             insertFirst(val);
             return;
@@ -33,7 +33,7 @@ public class LL {
         size++;
     }
 
-    public void insert(int val, int index) {
+    public void insert(int val, int index) {        // insert node at a paticular index
         if (index == 0) {
             insertFirst(val);
             return;
@@ -53,7 +53,7 @@ public class LL {
     }
 
 
-    public int deleteFirst() {
+    public int deleteFirst() {      // delete the first node
         int val = head.value;
         head = head.next;
         if (head == null){
@@ -64,7 +64,7 @@ public class LL {
 
     }
 
-    public int deleteLast() {
+    public int deleteLast() {            // delete the last node
         if (size <= 1) {
             return deleteFirst();
         }
@@ -76,7 +76,7 @@ public class LL {
         return val;
     }
 
-    public int delete(int index) {
+    public int delete(int index) {      // delete the particular node
         if (index == 0) {
             return deleteFirst();
         }
@@ -92,7 +92,7 @@ public class LL {
         return val;
     }
 
-    public Node find(int value) {
+    public Node find(int value) {       // find the node for the particular value
         Node node = head;
         while (node != null) {
             if (node.value == value) {
@@ -103,7 +103,7 @@ public class LL {
         return null;
     }
 
-    public Node get(int index) {
+    public Node get(int index) {         // get the reference pointer of the node
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;
@@ -123,7 +123,7 @@ public class LL {
     }
 
 
-    private class Node {
+    private class Node {            // creating a node
         private int value;
         private Node next;
 
