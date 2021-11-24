@@ -79,7 +79,7 @@ public class DLL {
         }
     }
 
-    private class Node {
+    private class Node { // creating node
         int val;
         Node next;
         Node prev;
