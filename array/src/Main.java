@@ -32,3 +32,9 @@ public class Main {
     }
     }
 
+
+//------    int[] rnos = new int[5];  -------
+//left hand side of equal happens at compile time
+// right hand  of = happens at runtime
+
+// dynamic memory allocation- at runtime memory is allocated
