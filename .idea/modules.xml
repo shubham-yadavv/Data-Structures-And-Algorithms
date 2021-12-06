@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/algorithms/algorithms.iml" filepath="$PROJECT_DIR$/algorithms/algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/arrays/arrays.iml" filepath="$PROJECT_DIR$/arrays/arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/data-structure/data-structure.iml" filepath="$PROJECT_DIR$/data-structure/data-structure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linear-search/linear-search.iml" filepath="$PROJECT_DIR$/linear-search/linear-search.iml" />
     </modules>
   </component>
 </project>
