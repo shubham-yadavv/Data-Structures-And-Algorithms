@@ -3,11 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01-arrays/01-arrays.iml" filepath="$PROJECT_DIR$/01-arrays/01-arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-linear-search/02-linear-search.iml" filepath="$PROJECT_DIR$/02-linear-search/02-linear-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-binary search/03-binary search.iml" filepath="$PROJECT_DIR$/03-binary search/03-binary search.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Data-Structures-And-Algorithms.iml" filepath="$PROJECT_DIR$/.idea/Data-Structures-And-Algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/Linked-List/Linked-List.iml" filepath="$PROJECT_DIR$/Linked-List/Linked-List.iml" />
       <module fileurl="file://$PROJECT_DIR$/Questions/Questions.iml" filepath="$PROJECT_DIR$/Questions/Questions.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithms/algorithms.iml" filepath="$PROJECT_DIR$/algorithms/algorithms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linear-search/linear-search.iml" filepath="$PROJECT_DIR$/linear-search/linear-search.iml" />
     </modules>
   </component>
 </project>
