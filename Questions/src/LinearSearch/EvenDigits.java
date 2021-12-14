@@ -1,5 +1,6 @@
-package LinearSearch;
+// https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 
+package LinearSearch;
 public class EvenDigits {
     public static void main(String[] args) {
         int[] nums = {12,345,23,65,7806};
