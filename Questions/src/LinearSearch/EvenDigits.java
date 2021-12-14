@@ -1,7 +1,9 @@
-public class Even {
+package LinearSearch;
+
+public class EvenDigits {
     public static void main(String[] args) {
         int[] nums = {12,345,23,65,7806};
-            System.out.println(findNumbers(nums));
+        System.out.println(findNumbers(nums));
 //        System.out.println(digits(120));
 
     }
