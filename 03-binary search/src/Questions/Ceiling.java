@@ -26,11 +26,11 @@ public class Ceiling {
                 return mid;
 
             }
-            else if (arr[mid] < target) {
+            if (target < arr[mid]) {
                 start = mid + 1;
 
             }
-            else if (arr[mid] > target) {
+            else if (target > arr[mid]) {
                 end = mid - 1;
             }
 
