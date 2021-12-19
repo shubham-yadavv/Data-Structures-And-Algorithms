@@ -1,5 +1,3 @@
-
-
 pseudo code :--
 
 1. Start from the leftmost element of arr[] and one by one compare x with each element of arr[]
