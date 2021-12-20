@@ -18,7 +18,7 @@ public class MergeSort {
         }
     }
 
-    private static void merge(int[] arr, int[] left, int[] right) {
+    static void merge(int[] arr, int[] left, int[] right) {
         int i = 0;
         int j = 0;
         int k = 0;

@@ -7,7 +7,7 @@ public class BubbleSort {
         System.out.println(Arrays.toString(arr));
     }
 
-    static void bubble(int[] arr) {
+   static void bubble(int[] arr){
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -17,5 +17,5 @@ public class BubbleSort {
                 }
             }
         }
-    }
+   }
 }
