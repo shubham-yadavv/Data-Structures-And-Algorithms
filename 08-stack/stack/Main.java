@@ -1,4 +1,3 @@
-
 class Stack {
     int MAX = 1000;
     int top;
