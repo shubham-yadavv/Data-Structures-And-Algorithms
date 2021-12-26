@@ -1,3 +1,5 @@
+package assignment1;
+
 import java.util.*;
 class Complex_No{
     float real,img;
@@ -13,23 +15,23 @@ class Complex_No{
     }
 
     public void Display(Complex_No C1,Complex_No C2) {
-        System.out.println("First Complex Numbers =("+C1.real+")+("+C1.img+")i");
+        System.out.println("First assignment1.Complex Numbers =("+C1.real+")+("+C1.img+")i");
 
-        System.out.println("Second Complex Numbers =("+C2.real+")+("+C2.img+")i");
+        System.out.println("Second assignment1.Complex Numbers =("+C2.real+")+("+C2.img+")i");
     }
 
     public void AddNumbers(Complex_No C1,Complex_No C2) {
         float real,img;
         real=(C1.real+C2.real);
         img=(C1.img+C2.img);
-        System.out.println("Addition of Complex Numbers =("+real+")+("+img+")i");
+        System.out.println("Addition of assignment1.Complex Numbers =("+real+")+("+img+")i");
     }
 
     public void SubNumbers(Complex_No C1,Complex_No C2) {
         float real,img;
         real=(C1.real-C2.real);
         img=(C1.img-C2.img);
-        System.out.println("Substraction of Complex Numbers =("+real+")+("+img+")i");
+        System.out.println("Substraction of assignment1.Complex Numbers =("+real+")+("+img+")i");
     }
 
     public void MultiNumbers(Complex_No C1,Complex_No C2) {
@@ -38,7 +40,7 @@ class Complex_No{
 
         img=(C1.real*C2.img+C1.img*C2.real);
 
-        System.out.println("Multiplication of Complex Numbers =("+real+")+("+img+")i");
+        System.out.println("Multiplication of assignment1.Complex Numbers =("+real+")+("+img+")i");
 
     }
 
@@ -48,7 +50,7 @@ class Complex_No{
         real=(C1.real*C2.real+C1.img*C2.img)/(C2.real*C2.real+C2.img*C2.img);
 
         img=(C1.img*C2.real-C1.real*C2.img)/(C2.real*C2.real+C2.img*C2.img);
-        System.out.println("Division of Complex Numbers =("+real+")+("+img+")i");
+        System.out.println("Division of assignment1.Complex Numbers =("+real+")+("+img+")i");
     }
 
 }
@@ -59,7 +61,7 @@ public class Complex {
         float num1,num2;
         Complex_No cal=new Complex_No();
         Scanner Sc=new Scanner(System.in);
-        System.out.println("Enter the Complex number in a+bi format : ");
+        System.out.println("Enter the assignment1.Complex number in a+bi format : ");
 
         System.out.print("Enter real part of First Number: a : ");
         num1=Sc.nextFloat();
