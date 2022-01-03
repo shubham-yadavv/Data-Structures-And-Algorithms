@@ -20,6 +20,4 @@ public class SelctionSort {
             arr[min] = temp;
         }
     }
-
-
 }
