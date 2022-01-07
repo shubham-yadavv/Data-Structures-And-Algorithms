@@ -1,23 +1,18 @@
-package Questions;
+package BinarySearch;
 
-public class Ceiling {
+public class Floor {
 
     public static void main(String[] args) {
         int[] arr = {2,3,5,9,14,16,18};
         int target = 15;
-        int ans = ceiling(arr, target);
+        int ans = floor(arr, target);
         System.out.println(ans);
 
 
 
     }
-// returns the index of the first element in arr that is greater than or equal to target
-    static int ceiling(int[] arr, int target) {
-
-        if (target > arr[arr.length - 1]) {
-            return -1;
-        }
-
+// returns the index of the first element in arr that is less than or equal to target
+    static int floor(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
@@ -30,7 +25,6 @@ public class Ceiling {
                 return mid;
             }
         }
-        return start;
+        return end;
     }
-
 }
