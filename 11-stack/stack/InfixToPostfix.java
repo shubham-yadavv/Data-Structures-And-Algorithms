@@ -5,17 +5,12 @@ public class InfixToPostfix {
 
 
     static int precedence(char c){
-        switch (c){
-            case '+':
-            case '-':
-                return 1;
-            case '*':
-            case '/':
-                return 2;
-            case '^':
-                return 3;
-        }
-        return -1;
+        return switch (c) {
+            case '+', '-' -> 1;
+            case '*', '/' -> 2;
+            case '^' -> 3;
+            default -> -1;
+        };
     }
 
     static String infixToPostFix(String expression){
