@@ -11,3 +11,6 @@
 
 [linked list](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/Linked-List/linked-list/linked_list)
     : single linked list, double linked list, circular linked list
+
+[stack](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/11-stack/stack)
+    : array implementation, infix to postfix converison.
