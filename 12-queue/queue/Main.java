@@ -6,7 +6,7 @@ class Queue{
     int rear = -1;
     int[] arr = new int[max];
 
-    void enqueue(int x){
+    void enqueue(int x){    //add an element to the rear of the queue
         if(rear == max - 1){
             System.out.println("Queue is full");
             return;
@@ -18,7 +18,7 @@ class Queue{
         arr[rear] = x;
     }
 
-     int dequeue(){
+     int dequeue(){          //return the front element and remove it from the queue
         if(front == -1){
             System.out.println("Queue is empty");
             return -1;
@@ -31,7 +31,15 @@ class Queue{
         return x;
     }
 
-    void display(){
+    int front(){             //return the front element
+        if(front == -1){
+            System.out.println("Queue is empty");
+            return -1;
+        }
+        return arr[front];
+    }
+
+    void display(){         //display the queue
         if(front == -1){
             System.out.println("Queue is empty");
             return;
