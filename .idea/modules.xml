@@ -9,17 +9,17 @@
       <module fileurl="file://$PROJECT_DIR$/05-strings/05-strings.iml" filepath="$PROJECT_DIR$/05-strings/05-strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-patterns/06-patterns.iml" filepath="$PROJECT_DIR$/06-patterns/06-patterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-recursion/07-recursion.iml" filepath="$PROJECT_DIR$/07-recursion/07-recursion.iml" />
-      <module fileurl="file://$PROJECT_DIR$/09-maths/09-maths.iml" filepath="$PROJECT_DIR$/09-maths/09-maths.iml" />
-      <module fileurl="file://$PROJECT_DIR$/10-Linked-List/10-Linked-List.iml" filepath="$PROJECT_DIR$/10-Linked-List/10-Linked-List.iml" />
-      <module fileurl="file://$PROJECT_DIR$/11-stack/11-stack.iml" filepath="$PROJECT_DIR$/11-stack/11-stack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/12-queue/12-queue.iml" filepath="$PROJECT_DIR$/12-queue/12-queue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/13-trees/13-trees.iml" filepath="$PROJECT_DIR$/13-trees/13-trees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-maths/08-maths.iml" filepath="$PROJECT_DIR$/08-maths/08-maths.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-Linked-List/09-Linked-List.iml" filepath="$PROJECT_DIR$/09-Linked-List/09-Linked-List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-stack/10-stack.iml" filepath="$PROJECT_DIR$/10-stack/10-stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-queue/11-queue.iml" filepath="$PROJECT_DIR$/11-queue/11-queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12-trees/12-trees.iml" filepath="$PROJECT_DIR$/12-trees/12-trees.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Data-Structures-And-Algorithms.iml" filepath="$PROJECT_DIR$/.idea/Data-Structures-And-Algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/Questions/Questions.iml" filepath="$PROJECT_DIR$/Questions/Questions.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithms/algorithms.iml" filepath="$PROJECT_DIR$/algorithms/algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/graphs/graphs.iml" filepath="$PROJECT_DIR$/graphs/graphs.iml" />
       <module fileurl="file://$PROJECT_DIR$/oops/oops.iml" filepath="$PROJECT_DIR$/oops/oops.iml" />
-      <module fileurl="file://$PROJECT_DIR$/11-stack/queue.iml" filepath="$PROJECT_DIR$/11-stack/queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-stack/queue.iml" filepath="$PROJECT_DIR$/10-stack/queue.iml" />
     </modules>
   </component>
 </project>

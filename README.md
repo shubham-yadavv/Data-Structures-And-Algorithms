@@ -14,3 +14,6 @@
 
 [stack](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/11-stack/stack)
     : array implementation, infix to postfix converison.
+
+[queue](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/11-queue)
+    : array implementation.
