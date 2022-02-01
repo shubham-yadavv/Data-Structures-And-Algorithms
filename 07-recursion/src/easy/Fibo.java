@@ -1,3 +1,5 @@
+package easy;
+
 public class Fibo {
     public static void main(String[] args) {
         int ans = fibo(4);
