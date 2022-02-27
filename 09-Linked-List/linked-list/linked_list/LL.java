@@ -21,7 +21,7 @@ public class LL {
         size += 1;
     }
 
-    public void insertLast(int val) {       // inser node at last
+    public void insertLast(int val) {       // insert node at last
         if (tail == null) {
             insertFirst(val);
             return;
@@ -33,7 +33,7 @@ public class LL {
         size++;
     }
 
-    public void insert(int val, int index) {        // insert node at a paticular index
+    public void insert(int val, int index) {        // insert node at a particular index
         if (index == 0) {
             insertFirst(val);
             return;
@@ -122,7 +122,6 @@ public class LL {
         System.out.println("END");
     }
 
-
     private class Node {            // creating a node
         private int value;
         private Node next;
@@ -137,7 +136,4 @@ public class LL {
         }
     }
 
-
 }
-
-

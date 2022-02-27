@@ -20,6 +20,8 @@
       <module fileurl="file://$PROJECT_DIR$/graphs/graphs.iml" filepath="$PROJECT_DIR$/graphs/graphs.iml" />
       <module fileurl="file://$PROJECT_DIR$/oops/oops.iml" filepath="$PROJECT_DIR$/oops/oops.iml" />
       <module fileurl="file://$PROJECT_DIR$/10-stack/queue.iml" filepath="$PROJECT_DIR$/10-stack/queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12-trees/test.iml" filepath="$PROJECT_DIR$/12-trees/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test2/test2.iml" filepath="$PROJECT_DIR$/test2/test2.iml" />
     </modules>
   </component>
 </project>
