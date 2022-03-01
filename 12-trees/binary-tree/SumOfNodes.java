@@ -1,5 +1,14 @@
 public class SumOfNodes {
 
+    static class Node{
+        int data;
+        Node left, right;
+
+        Node(int data){
+            this.data = data;
+        }
+    }
+
     public static int sumOfNodes(Node root){
         if (root == null){
             return 0;
@@ -23,14 +32,6 @@ public class SumOfNodes {
 
     }
 
-    static class Node{
-        int data;
-        Node left, right;
 
-        Node(int data){
-            this.data = data;
-            left = right = null;
-        }
-    }
 }
 
