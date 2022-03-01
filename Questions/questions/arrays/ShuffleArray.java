@@ -1,4 +1,4 @@
-package arrays;
+
 
 //https://leetcode.com/problems/shuffle-the-array/
 

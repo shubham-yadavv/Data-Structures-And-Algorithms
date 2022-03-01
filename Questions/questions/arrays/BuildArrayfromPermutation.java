@@ -1,4 +1,4 @@
-package arrays;
+
 //  https://leetcode.com/problems/build-array-from-permutation/
 
 public class BuildArrayfromPermutation {

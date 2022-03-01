@@ -1,6 +1,8 @@
 {
     "java.project.sourcePaths": [
         "test",
-        "09-Linked-List"
+        "12-trees/binary-tree",
+        "09-Linked-List",
+        "Questions/questions/arrays"
     ]
 }
