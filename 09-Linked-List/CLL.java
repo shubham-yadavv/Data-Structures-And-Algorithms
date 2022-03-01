@@ -1,4 +1,3 @@
-package linked_list;
 
 public class CLL {
 
