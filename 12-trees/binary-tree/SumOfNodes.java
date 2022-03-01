@@ -6,6 +6,8 @@ public class SumOfNodes {
 
         Node(int data){
             this.data = data;
+            this.left = null;
+            this.right = null;
         }
     }
 

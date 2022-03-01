@@ -1,14 +1,5 @@
 public class CountOfNodes {
 
-    static class Node {
-        int data;
-        Node left, right;
-
-        public Node(int data) {
-            this.data = data;
-        }
-    }
-
     public static int countNodes(Node root) {
         if (root == null) {
             return 0;
@@ -27,8 +18,6 @@ public class CountOfNodes {
         System.out.println(countNodes(root));
     }
 
-
-    
 }
 
 

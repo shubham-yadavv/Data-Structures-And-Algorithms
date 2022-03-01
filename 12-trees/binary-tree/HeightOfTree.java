@@ -1,14 +1,5 @@
 public class HeightOfTree {
 
-    static class Node{
-        int data;
-        Node left, right;
-
-        Node(int data){
-            this.data = data;
-        }
-    }
-
     public static int height(Node root){
         if(root == null){
             return 0;
