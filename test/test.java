@@ -17,8 +17,7 @@ class Employee{
 
 }
 
-
-public class test {
+class test {
     public static void main(String[] args) {
         Employee e = new Employee(2,"shubh");
         e.display();
