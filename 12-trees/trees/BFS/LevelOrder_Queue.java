@@ -19,8 +19,8 @@ class LevelOrder_Queue {
         root = null;
     }
 
-    void levelorder(Node root){
-        if (root == null){
+    void levelorder(Node root) {
+        if (root == null) {
             return;
         }
 
@@ -28,32 +28,26 @@ class LevelOrder_Queue {
         q.add(root);
         q.add(null);
 
-        while (!q.isEmpty()){
+        while (!q.isEmpty()) {
             Node currNode = q.remove();
-            if (currNode == null){
+            if (currNode == null) {
                 System.out.println();
-                if (q.isEmpty()){
+                if (q.isEmpty()) {
                     break;
-                }else{
+                } else {
                     q.add(null);
                 }
-            }else{
+            } else {
                 System.out.print(currNode.data + " ");
-                if (currNode.left != null){
+                if (currNode.left != null) {
                     q.add(currNode.left);
                 }
-                if (currNode.right != null){
+                if (currNode.right != null) {
                     q.add(currNode.right);
                 }
-
-
             }
-
         }
-
     }
-
-
     public static void main(String[] args) {
         LevelOrder_Queue tree = new LevelOrder_Queue();
 
@@ -67,5 +61,4 @@ class LevelOrder_Queue {
         System.out.println("\nLevel order taversal ");
         tree.levelorder(tree.root);
     }
-
 }
