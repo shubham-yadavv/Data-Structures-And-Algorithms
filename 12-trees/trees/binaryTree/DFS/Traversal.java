@@ -1,4 +1,4 @@
-package DFS;
+package binaryTree.DFS;
 
 class Node {
     int data;

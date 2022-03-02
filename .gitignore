@@ -532,7 +532,7 @@ FakesAssemblies/
 # GhostDoc plugin setting file
 *.GhostDoc.xml
 
-# Node.js Tools for Visual Studio
+# binaryTree.BFS.Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
 
@@ -731,7 +731,7 @@ coverage*.info
 
 # GhostDoc plugin setting file
 
-# Node.js Tools for Visual Studio
+# binaryTree.BFS.Node.js Tools for Visual Studio
 
 # Visual Studio 6 build log
 
