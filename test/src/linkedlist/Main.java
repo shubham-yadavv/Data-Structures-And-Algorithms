@@ -1,3 +1,4 @@
+package linkedlist;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,9 +8,10 @@ public class Main {
         list.insertFirst(11);
         list.insertFirst(8);
         list.insertFirst(5);
-        list.insertLast(100);
 
-        list.insert(69,0);
+        list.insertLast2(100);
+
+        list.insert(69,3);
         list.display();
     }
 }
