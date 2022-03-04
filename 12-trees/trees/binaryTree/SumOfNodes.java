@@ -1,4 +1,18 @@
+package binaryTree;
+
 public class SumOfNodes {
+
+
+    public static int sumOfNodes(Node root){
+        if (root == null){
+            return 0;
+        }
+
+        int leftsum = sumOfNodes(root.left);
+        int rightsum = sumOfNodes(root.right);
+
+        return leftsum + rightsum + root.data;
+    }
 
     static class Node{
         int data;
@@ -11,16 +25,6 @@ public class SumOfNodes {
         }
     }
 
-    public static int sumOfNodes(Node root){
-        if (root == null){
-            return 0;
-        }
-
-        int leftsum = sumOfNodes(root.left);
-        int rightsum = sumOfNodes(root.right);
-
-        return leftsum + rightsum + root.data;
-    }
 
     public static void main(String[] args) {
         Node root = new Node(1);

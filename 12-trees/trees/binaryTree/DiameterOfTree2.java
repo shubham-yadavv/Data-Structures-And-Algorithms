@@ -1,3 +1,5 @@
+package binaryTree;
+
 public class DiameterOfTree2 {
 
     static class TreeInfo{
@@ -28,6 +30,15 @@ public class DiameterOfTree2 {
 
         return new TreeInfo(myheight, mydiameter);
 
+    }
+
+
+    static class Node{
+        int data;
+        Node left, right;
+        public Node(int data){
+            this.data = data;
+        }
     }
 
     public static void main(String[] args) {

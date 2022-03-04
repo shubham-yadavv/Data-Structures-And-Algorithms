@@ -1,3 +1,5 @@
+package binaryTree;
+
 public class HeightOfTree {
 
     public static int height(Node root){
@@ -9,6 +11,14 @@ public class HeightOfTree {
         int rightHeight = height(root.right);
 
         return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    static class Node{
+        int data;
+        Node left, right;
+        public Node(int data){
+            this.data = data;
+        }
     }
 
 

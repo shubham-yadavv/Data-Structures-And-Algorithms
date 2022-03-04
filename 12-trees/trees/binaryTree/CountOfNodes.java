@@ -1,12 +1,25 @@
-public class CountOfNodes {
+package binaryTree;
 
+public class CountOfNodes {
     public static int countNodes(Node root) {
         if (root == null) {
             return 0;
         }
         return countNodes(root.left) + countNodes(root.right) + 1 ;
     }
-    
+
+    static class Node{
+        public int data;
+        public Node left;
+        public Node right;
+
+        public Node(int data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
+    }
+
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
@@ -18,6 +31,5 @@ public class CountOfNodes {
         System.out.println(countNodes(root));
     }
 
+
 }
-
-

@@ -1,3 +1,4 @@
+package binaryTree;
 public class DiameterOfTree {
 
     public int diameter(Node root) {
@@ -20,6 +21,17 @@ public class DiameterOfTree {
 
         return 1 + Math.max(height(root.left), height(root.right));
     }
+
+    static class Node {
+        int data;
+        Node left;
+        Node right;
+
+        public Node(int data){
+            this.data = data;
+        }
+    }
+
 
     public static void main(String[] args) {
         Node root = new Node(1);

@@ -68,7 +68,6 @@ public class LL {
         if (size <= 1) {
             return deleteFirst();
         }
-
         Node secondLast = get(size - 2);
         int val = tail.value;
         tail = secondLast;
