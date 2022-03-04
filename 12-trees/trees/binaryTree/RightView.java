@@ -1,30 +1,29 @@
 package binaryTree;
 
-public class LeftView {
-    static class Node {
+public class RightView {
+    static class Node{
         int data;
         Node left, right;
 
-        public Node(int data) {
+        public Node(int data){
             this.data = data;
             left = right = null;
-
         }
     }
 
     int max_level = 0;
-
-    void leftview(Node node, int level){
-        if (node == null)
+    public void rightview(Node node, int level){
+        if (node == null){
             return;
-
-        if (max_level < level) {
+        }
+        if (max_level < level){
             System.out.print(" " + node.data);
             max_level = level;
         }
 
-        leftview(node.left, level + 1);
-        leftview(node.right, level + 1);
+        rightview(node.right, level + 1);
+        rightview(node.left, level + 1);
+
     }
 
     public static void main(String[] args) {
@@ -32,9 +31,8 @@ public class LeftView {
         root.left = new Node(2);
         root.right = new Node(3);
 
-        LeftView l = new LeftView();
-        l.leftview(root, 1);
+        RightView r  = new RightView();
+        r.rightview(root, 1);
+
     }
-
-
 }

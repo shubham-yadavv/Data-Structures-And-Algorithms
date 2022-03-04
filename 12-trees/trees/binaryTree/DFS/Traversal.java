@@ -37,13 +37,13 @@ class Tree {
     }
 
 
-    void posorder(Node root){
+    void postorder(Node root){
         if (root == null){
             return;
         }
 
-        posorder(root.left);
-        posorder(root.right);
+        postorder(root.left);
+        postorder(root.right);
         System.out.print(root.data + " ");
     }
 
@@ -65,6 +65,6 @@ class Tree {
         tree.inorder(tree.root);
 
         System.out.println("\nPostorder traversal ");
-        tree.posorder(tree.root);
+        tree.postorder(tree.root);
     }
 }
