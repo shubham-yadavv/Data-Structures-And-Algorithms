@@ -15,7 +15,7 @@ public class SearchBST {
         if (root == null){
             return null;
         }
-        if ( root.data == val){
+        if ( val == root.data){
             return root;
         }
         if (val < root.data ){
