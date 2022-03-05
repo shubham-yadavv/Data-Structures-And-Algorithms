@@ -9,10 +9,9 @@ public class InsertBST {
             this.data = data;
             left = right = null;
         }
-
     }
 
-    Node insert(Node root, int val){
+    static Node insert(Node root, int val){
         if (root == null){
             return new Node(val);
         }
@@ -26,7 +25,7 @@ public class InsertBST {
         return root;
     }
 
-    void inorder(Node root){
+    static void inorder(Node root){
         if (root == null){
             return;
         }
@@ -37,14 +36,13 @@ public class InsertBST {
 
     public static void main(String[] args) {
         Node root = null;
-        InsertBST i = new InsertBST();
-        root = i.insert(root, 5);
-        i.insert(root, 1);
-        i.insert(root, 3);
-        i.insert(root, 4);
-        i.insert(root, 2);
-        i.insert(root, 7);
+        root = insert(root, 5);
+        insert(root, 1);
+        insert(root, 3);
+        insert(root, 4);
+        insert(root, 2);
+        insert(root, 7);
 
-        i.inorder(root);
+        inorder(root);
     }
 }
