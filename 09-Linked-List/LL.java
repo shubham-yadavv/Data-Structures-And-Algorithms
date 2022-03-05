@@ -1,14 +1,9 @@
-// package linked_list;
-
 public class LL {
 
     private Node head;
     private Node tail;
-    private int size;
+    private int size = 0;
 
-    public LL() {
-        this.size = 0;
-    }
 
     public void insertFirst(int val) {      // insert node at first
         Node node = new Node(val);
@@ -51,7 +46,6 @@ public class LL {
         size++;
 
     }
-
 
     public int deleteFirst() {      // delete the first node
         int val = head.value;
@@ -134,5 +128,4 @@ public class LL {
             this.next = next;
         }
     }
-
 }

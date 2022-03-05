@@ -1,7 +1,7 @@
 package bst;
 
 public class DeleteBST {
-    static class Node{
+    static class Node {
         int data;
         Node left, right;
 
@@ -29,14 +29,13 @@ public class DeleteBST {
         return root;
     }
 
-    private static int inorderSucc(Node root) {
+    private static int inorderSucc(Node root){
         int minv = root.data;
         while (root.left != null) {
             minv = root.left.data;
             root = root.left;
         }
         return minv;
-
     }
 
     static void inorder(Node root){
@@ -60,6 +59,5 @@ public class DeleteBST {
         delete(root,  5);
         System.out.println();
         inorder(root);
-
     }
 }
