@@ -3,7 +3,6 @@ import java.util.Stack;
 
 public class InfixToPostfix {
 
-
     static int precedence(char c){
         return switch (c) {
             case '+', '-' -> 1;
