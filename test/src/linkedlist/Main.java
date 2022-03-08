@@ -17,11 +17,10 @@ public class Main {
 
         DLL dl = new DLL();
         dl.insertFirst(3);
-        dl.insertFirst(4);
-        dl.insertFirst(7);
-        dl.insertFirst(23);
-        dl.insertLast(100);
-
+        dl.insertFirst(9);
+        dl.insertFirst(8);
+        dl.insertFirst(6);
+        dl.insert(9, 7);
         dl.display();
 
 
