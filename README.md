@@ -19,4 +19,4 @@
     : array implementation.
 
 [trees](https://github.com/shubham-yadavv/Data-Structures-And-Algorithms/tree/main/12-trees/trees)
-    : level order, preorder, inorder, postorder traversals.
+    : binray tree, binary search tree, DFS, BFS.
