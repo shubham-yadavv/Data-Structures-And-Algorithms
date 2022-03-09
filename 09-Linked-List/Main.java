@@ -1,15 +1,15 @@
 public class Main{
     public static void main(String[] args) {
 
-        LL list = new LL();
-        list.insertFirst(15);
-        list.insertFirst(11);
-        list.insertFirst(8);
-        list.insertFirst(5);
-        list.insertLast(100);
-
-        list.insert(69,0);
-        list.display();
+//        LL list = new LL();
+//        list.insertFirst(15);
+//        list.insertFirst(11);
+//        list.insertFirst(8);
+//        list.insertFirst(5);
+//        list.insertLast(100);
+//
+//        list.insert(69,0);
+//        list.display();
 
 
 //        DLL dl = new DLL();
@@ -23,15 +23,8 @@ public class Main{
 //        dl.display();
 
 //        CLL cl = new CLL();
-//        cl.insert(4);
-//        cl.insert(7);
-//        cl.insert(29);
-//        cl.insert(8);
-//        cl.delete(3);
-//
-//        cl.display();
-//
-
+//        cl.addEmpty(5);
+//        cl.traverse();
 
 
     }

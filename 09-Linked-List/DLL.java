@@ -32,22 +32,20 @@ public class DLL {
 
     public void insertLast(int val) {           // insert node at last without tail
         Node node = new Node(val);
-        Node last = head;
-
-        node.next = null;
 
         if (head == null) {
             node.prev = null;
             head = node;
             return;
         }
-
+        node.next = null;
+        Node last = head;
         while (last.next != null) {
             last = last.next;
         }
-
-        last.next = node;
         node.prev = last;
+        last.next = node;
+
     }
 
     public Node find(int value) {
