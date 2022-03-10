@@ -14,14 +14,24 @@ public class Main {
 //
 //        System.out.println(list.delete(1));
 //        list.display();
+//
+//        DLL dl = new DLL();
+//        dl.insertFirst(3);
+//        dl.insertFirst(9);
+//        dl.insertFirst(8);
+//        dl.insertFirst(6);
+//        dl.insert(9, 7);
+//        dl.display();
 
-        DLL dl = new DLL();
-        dl.insertFirst(3);
-        dl.insertFirst(9);
-        dl.insertFirst(8);
-        dl.insertFirst(6);
-        dl.insert(9, 7);
-        dl.display();
+        CLL list = new CLL();
+        list.insert(1);
+        list.insert(2);
+        list.insert(4);
+        list.insert(5);
+        list.addAfter(100, 2);
+
+
+        list.display();
 
 
 

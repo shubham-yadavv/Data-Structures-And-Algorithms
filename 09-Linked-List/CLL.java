@@ -1,151 +1,114 @@
 public class CLL {
-    private Node last;
 
-    public Node addEmpty(int data){
-        if (last != null){
-            return last;
-        }
-
-        Node node = new Node(data);
-        node.data = data;
-        last = node;
-
-        node.next = last;
-
-        return last;
-
-    }
-
-    public Node insertFirst(int data){
-        if (last == null){
-            return addEmpty(data);
-        }
-
-        Node node = new Node(data);
-
-        node.next = last.next;
-        last.next = node;
-
-        return last;
-    }
-
-    public Node insertLast(int data){
-        if (last == null){
-            return addEmpty(data);
-        }
-
-        Node node = new Node(data);
-
-        node.next = last.next;
-        last.next = node;
-        last = node;
-
-        return last;
-
-    }
-
-    public Node addAfter(int data, int item){
-        if (last == null){
-            return null;
-        }
-
-        Node p;
-        p = last.next;
-
-        do {
-            if (p.data == item){
-                Node node = new Node(data);
-
-                node.next = p.next;
-                p.next = node;
-
-                if (p == last){
-                    last = node;
-                }
-                return last;
-            }
-            p = p.next;
-        }while (p != last.next);
-
-        System.out.println(item + "given node is not present in the list");
-        return last;
-    }
+    private Node head = null;
+    private Node tail = null;
 
 
-
-    public Node deleteNode(int val){
-        if (last == null){
-            return null;
-        }
-
-        if (last.data == val && last.next == last){
-            last = null;
-            return last;
-        }
-
-        Node temp = last;
-        Node d;
-
-        if (last.data == val) {
-            while (temp.next != last) {
-                temp = temp.next;
-            }
-            temp.next = last.next;
-            last = temp.next;
-        }
-
-        while (temp.next != last && temp.next.data != val) {
-            temp = temp.next;
-        }
-
-        if (temp.next.data == val) {
-            d = temp.next;
-            temp.next = d.next;
-        }
-        return last;
-
-    }
-
-    public void traverse(Node head) {
-        Node temp;
+    public void insert(int val) {
+        Node node = new Node(val);
         if (head == null) {
-            System.out.println("List is empty.");
+            head = node;
+            tail = node;
             return;
         }
 
-        temp = head.next;
+        tail.next = node;
+        node.next = head;
+        tail = node;
+    }
 
+    public Node addAfter(int data, int item) {
+        if (head == null)
+            return null;
 
+        Node newNode, p;
+        p = head.next;
         do {
-            System.out.print(temp.data + "->");
-            temp = temp.next;
+            // if the item is found, place newNode after it
+            if (p.data == item) {
+                // allocate memory to the new node
+                newNode = new Node(data);
 
-        }
 
-        while(temp != head.next);
+                // make the next of the current node as the next of newNode
+                newNode.next = p.next;
+
+                // put newNode to the next of p
+                p.next = newNode;
+
+                // if p is the last node, make newNode as the last node
+                if (p == head)
+                    head = newNode;
+                return head;
+            }
+            p = p.next;
+        } while (p != head.next);
+
+        System.out.println(item + "The given node is not present in the list");
+        return head;
 
     }
 
-    private class Node{
+    public void display() {
+        Node node = head;
+        if (head != null) {
+            do {
+                System.out.print(node.data + " -> ");
+                if (node.next != null) {
+                    node = node.next;
+                }
+            } while (node != head);
+        }
+        System.out.println("HEAD");
+    }
 
+    public void delete(int val) {
+        Node node = head;
+        if (node == null) {
+            return;
+        }
+
+        if (head == tail){
+            head = null;
+            tail = null;
+            return;
+        }
+
+        if (node.data == val) {
+            head = head.next;
+            tail.next = head;
+            return;
+        }
+
+        do {
+            Node n = node.next;
+            if (n.data == val) {
+                node.next = n.next;
+                break;
+            }
+            node = node.next;
+        } while (node != head);
+
+    }
+
+    private class Node {
         int data;
         Node next;
 
-        public Node(int data){
-            this.data = data;
+        public Node(int val) {
+            this.data = val;
         }
     }
 
     public static void main(String[] args) {
-        CLL cl = new CLL();
-        cl.addEmpty(5);
-        cl.insertFirst(7);
-        cl.insertFirst(4);
-        cl.insertLast(100);
-        cl.addAfter(69, 4);
-        cl.traverse(cl.last);
-        System.out.println();
-        cl.deleteNode(7);
-        cl.traverse(cl.last);
+        CLL list = new CLL();
+        list.insert(1);
+        list.insert(2);
+        list.insert(4);
+        list.insert(5);
+        list.addAfter(100, 2);
+
+
+        list.display();
     }
 }
