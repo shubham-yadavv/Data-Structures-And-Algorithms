@@ -29,7 +29,8 @@ public class Main {
         list.insert(4);
         list.insert(5);
         list.addAfter(100, 2);
-
+        list.display();
+        list.delete(4);
 
         list.display();
 

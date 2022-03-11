@@ -1,3 +1,5 @@
+package linkedlist;
+
 public class CLL {
 
     private Node head = null;
@@ -18,27 +20,24 @@ public class CLL {
     }
 
     public Node addAfter(int data, int item) {
-        if (head == null)
+        if (head == null) {
             return null;
+        }
 
-        Node newNode, p;
+        Node p;
         p = head.next;
         do {
-            // if the item is found, place newNode after it
             if (p.data == item) {
-                // allocate memory to the new node
-                newNode = new Node(data);
 
+                Node node = new Node(data);
 
-                // make the next of the current node as the next of newNode
-                newNode.next = p.next;
+                node.next = p.next;
 
-                // put newNode to the next of p
-                p.next = newNode;
+                p.next = node;
 
-                // if p is the last node, make newNode as the last node
-                if (p == head)
-                    head = newNode;
+                if (p == head) {
+                    head = node;
+                }
                 return head;
             }
             p = p.next;
@@ -46,6 +45,36 @@ public class CLL {
 
         System.out.println(item + "The given node is not present in the list");
         return head;
+
+    }
+
+
+    public void delete(int data) {
+        Node node = head;
+        if (node == null) {
+            return;
+        }
+
+        if (head == tail){
+            head = null;
+            tail = null;
+            return;
+        }
+
+        if (node.data == data) {
+            head = head.next;
+            tail.next = head;
+            return;
+        }
+
+        do {
+            Node n = node.next;
+            if (n.data == data) {
+                node.next = n.next;
+                break;
+            }
+            node = node.next;
+        } while (node != head);
 
     }
 
@@ -62,34 +91,7 @@ public class CLL {
         System.out.println("HEAD");
     }
 
-    public void delete(int val) {
-        Node node = head;
-        if (node == null) {
-            return;
-        }
 
-        if (head == tail){
-            head = null;
-            tail = null;
-            return;
-        }
-
-        if (node.data == val) {
-            head = head.next;
-            tail.next = head;
-            return;
-        }
-
-        do {
-            Node n = node.next;
-            if (n.data == val) {
-                node.next = n.next;
-                break;
-            }
-            node = node.next;
-        } while (node != head);
-
-    }
 
     private class Node {
         int data;
@@ -100,15 +102,4 @@ public class CLL {
         }
     }
 
-    public static void main(String[] args) {
-        CLL list = new CLL();
-        list.insert(1);
-        list.insert(2);
-        list.insert(4);
-        list.insert(5);
-        list.addAfter(100, 2);
-
-
-        list.display();
-    }
 }

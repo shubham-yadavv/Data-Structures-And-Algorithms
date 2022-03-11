@@ -48,6 +48,36 @@ public class CLL {
 
     }
 
+
+    public void delete(int data) {
+        Node node = head;
+        if (node == null) {
+            return;
+        }
+
+        if (head == tail){
+            head = null;
+            tail = null;
+            return;
+        }
+
+        if (node.data == data) {
+            head = head.next;
+            tail.next = head;
+            return;
+        }
+
+        do {
+            Node n = node.next;
+            if (n.data == data) {
+                node.next = n.next;
+                break;
+            }
+            node = node.next;
+        } while (node != head);
+
+    }
+
     public void display() {
         Node node = head;
         if (head != null) {
