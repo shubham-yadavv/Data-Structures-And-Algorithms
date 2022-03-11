@@ -24,18 +24,13 @@ public class Main {
 //        dl.display();
 
         CLL list = new CLL();
-        list.insert(1);
-        list.insert(2);
+        list.insert(3);
+        list.insert(7);
         list.insert(4);
-        list.insert(5);
-        list.addAfter(100, 2);
+        list.insert(69);
+        list.addafter(100, 7);
         list.display();
-        list.delete(4);
-
+        list.delete(69);
         list.display();
-
-
-
-
     }
 }
