@@ -22,9 +22,15 @@ public class Main{
 //        dl.insert(3,69);
 //        dl.display();
 
-//        CLL cl = new CLL();
-//        cl.addEmpty(5);
-//        cl.traverse();
+        CLL list = new CLL();
+        list.insert(3);
+        list.insert(7);
+        list.insert(4);
+        list.insert(69);
+        list.addafter(100, 7);
+        list.display();
+        list.delete(69);
+        list.display();
 
 
     }
