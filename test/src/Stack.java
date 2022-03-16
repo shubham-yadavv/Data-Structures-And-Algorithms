@@ -1,30 +1,46 @@
+// Java program to Implement a stack
+// using singly linked list
+// import package
+import static java.lang.System.exit;
+
+// Create Stack Using Linked list
 class StackUsingLinkedlist {
 
+    // A linked list node
     private class Node {
 
-        int data;
-        Node next;
+        int data; // integer data
+        Node link; // reference variable Node type
     }
+    // create global top reference variable global
     Node top;
+    // Constructor
     StackUsingLinkedlist()
     {
         this.top = null;
     }
 
-    public void push(int x)
+    // Utility function to add an element x in the stack
+    public void push(int x) // insert at the beginning
     {
-        Node node = new Node();
+        // create new node temp and allocate memory
+        Node temp = new Node();
 
-        if (node == null) {
+        // check if stack (heap) is full. Then inserting an
+        // element would lead to stack overflow
+        if (temp == null) {
             System.out.print("\nHeap Overflow");
             return;
         }
 
-        node.data = x;
-        node.next = top;
+        // initialize data into temp data field
+        temp.data = x;
+
+        // put top reference into temp link
+        temp.link = top;
 
         // update top reference
-        top = node;
+        top = temp;
     }
 
     // Utility function to check if the stack is empty or not
@@ -46,17 +62,14 @@ class StackUsingLinkedlist {
         }
     }
 
-    // Utility function to pop top element from the stack
     public void pop() // remove at the beginning
     {
-        // check for stack underflow
         if (top == null) {
             System.out.print("\nStack Underflow");
             return;
         }
 
-        // update the top pointer to point to the next node
-        top = (top).next;
+        top = (top).link;
     }
 
     public void display()
@@ -64,7 +77,7 @@ class StackUsingLinkedlist {
         // check for stack underflow
         if (top == null) {
             System.out.printf("\nStack Underflow");
-
+            exit(1);
         }
         else {
             Node temp = top;
@@ -73,38 +86,28 @@ class StackUsingLinkedlist {
                 // print node data
                 System.out.printf("%d->", temp.data);
 
-                // assign temp link to temp
-                temp = temp.next;
+                temp = temp.link;
             }
         }
     }
 }
-// main class
-public class StackAsLinkedList {
-    public static void main(String[] args)
-    {
-        // create Object of Implementing class
+public class Stack {
+    public static void main(String[] args) {
         StackUsingLinkedlist obj = new StackUsingLinkedlist();
-        // insert Stack value
         obj.push(11);
         obj.push(22);
         obj.push(33);
         obj.push(44);
 
-        // print Stack elements
         obj.display();
 
-        // print Top element of Stack
         System.out.printf("\nTop element is %d\n", obj.peek());
 
-        // Delete top element of Stack
         obj.pop();
         obj.pop();
 
-        // print Stack elements
         obj.display();
 
-        // print Top element of Stack
         System.out.printf("\nTop element is %d\n", obj.peek());
     }
 }
