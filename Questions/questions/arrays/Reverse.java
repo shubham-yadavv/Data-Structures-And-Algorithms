@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Reverse {
 
     static void reverse(int[] arr, int start, int end){
