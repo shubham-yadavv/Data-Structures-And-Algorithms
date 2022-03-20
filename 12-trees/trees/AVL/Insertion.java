@@ -1,16 +1,7 @@
 package AVL;
 
-class Node {
-    int key, height;
-    Node left, right;
+public class Insertion {
 
-    Node(int data) {
-        key = data;
-        height = 1;
-    }
-}
-
-class AVLTree {
     Node root;
 
     int height(Node N) {
@@ -59,41 +50,40 @@ class AVLTree {
 
     Node insert(Node node, int key) {
 
-        if (node == null)
-            return (new Node(key));
 
-        if (key < node.key)
-        {
+        if (node == null) {
+            return (new Node(key));
+        }
+
+        if (key < node.key) {
             node.left = insert(node.left, key);
         }
-        else if (key > node.key)
-        {
+        else if (key > node.key) {
             node.right = insert(node.right, key);
         }
-        else
-        {
+        else {
             return node;
         }
 
         node.height = 1 + max(height(node.left),
                 height(node.right));
 
+
         int balance = getBalance(node);
 
         if (balance > 1 && key < node.left.key)
-        {
             return rightRotate(node);
-        }
+
 
         if (balance < -1 && key > node.right.key)
-        {
             return leftRotate(node);
-        }
+
 
         if (balance > 1 && key > node.left.key) {
             node.left = leftRotate(node.left);
             return rightRotate(node);
         }
+
 
         if (balance < -1 && key < node.right.key) {
             node.right = rightRotate(node.right);
@@ -111,8 +101,19 @@ class AVLTree {
         }
     }
 
+
+    class Node {
+        int key, height;
+        Node left, right;
+
+        Node(int data) {
+            key = data;
+            height = 1;
+        }
+    }
+
     public static void main(String[] args) {
-        AVLTree tree = new AVLTree();
+        Insertion tree = new Insertion();
 
         tree.root = tree.insert(tree.root, 10);
         tree.root = tree.insert(tree.root, 20);
