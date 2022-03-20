@@ -24,5 +24,4 @@ public class MinAndMax{
         System.out.println(min(arr));
         System.out.println(max(arr));
     }
-
 }
