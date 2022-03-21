@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class MoveNegative {
-
     static void rearranage(int[] arr){
         int j = 0;
         int temp;
