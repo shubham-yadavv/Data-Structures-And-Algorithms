@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 
 public class Fibo {
@@ -17,7 +15,5 @@ public class Fibo {
             count++;
 
         }
-
-
     }
 }
