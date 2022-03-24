@@ -1,9 +1,9 @@
 public class MinAndMax{
     static int min(int[] arr){
         int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (min > arr[i]){
-                min = arr[i];
+        for (int j : arr) {
+            if (min > j) {
+                min = j;
             }
         }
         return min;
@@ -11,9 +11,9 @@ public class MinAndMax{
 
     static int max(int[] arr){
         int max = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (max < arr[i]){
-                max = arr[i];
+        for (int j : arr) {
+            if (max < j) {
+                max = j;
             }
         }
         return max;
