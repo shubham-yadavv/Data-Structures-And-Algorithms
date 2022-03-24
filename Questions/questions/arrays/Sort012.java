@@ -3,37 +3,42 @@ import java.util.Arrays;
 public class Sort012 {
 
     static void sort(int[] arr) {
-        int i, cnt0 = 0, cnt1 = 0, cnt2 = 0;
+        int c0 = 0, c1 = 0, c2 = 0;
 
-        for (i = 0; i < arr.length; i++) {
-            switch (arr[i]) {
-                case 0 -> cnt0++;
-                case 1 -> cnt1++;
-                case 2 -> cnt2++;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                c0++;
+            } else if (arr[i] == 1) {
+                c1++;
+            } else {
+                c2++;
             }
         }
 
-        i = 0;
-        while (cnt0 > 0) {
+        int i = 0;
+
+        while (c0 > 0){
             arr[i++] = 0;
-            cnt0--;
+            c0--;
         }
-
-        while (cnt1 > 0) {
+        while (c1 > 0){
             arr[i++] = 1;
-            cnt1--;
+            c1--;
         }
-
-        while (cnt2 > 0) {
+        while (c2 > 0){
             arr[i++] = 2;
-            cnt2--;
+            c2--;
         }
 
-        System.out.println(Arrays.toString(arr));
+        for (int k : arr) {
+            System.out.print(k + " ");
+        }
     }
 
     public static void main(String[] args) {
-        int[] arr = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
+        int[] arr = {2,0,1,2,0,1};
         sort(arr);
     }
 }
+
+
