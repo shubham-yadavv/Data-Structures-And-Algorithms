@@ -25,8 +25,8 @@ class UnionOf2Arrays {
     }
 
     public static void main(String args[]) {
-        int arr1[] = { 1, 2, 4, 5, 6 };
-        int arr2[] = { 2, 3, 5, 7 };
+        int[] arr1 = { 1, 2, 4, 5, 6 };
+        int[] arr2 = { 2, 3, 5, 7 };
         int m = arr1.length;
         int n = arr2.length;
         printUnion(arr1, arr2, m, n);
