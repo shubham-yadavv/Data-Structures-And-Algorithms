@@ -14,14 +14,12 @@ class Stack {
         }
         else {
             a[++top] = x;
-
         }
     }
 
     void pop() {
         if(top == -1) {
             System.out.println("Error: No element to pop");
-
         }
         top--;
     }

@@ -31,7 +31,6 @@ public class Reverse {
         recursiveReverse(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
 
-//
 //        System.out.println("non recursive reversed array");
 //        reverse(arr, 0, arr.length-1);
 //

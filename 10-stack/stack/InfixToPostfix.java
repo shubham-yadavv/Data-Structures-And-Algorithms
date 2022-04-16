@@ -4,12 +4,21 @@ import java.util.Stack;
 public class InfixToPostfix {
 
     static int precedence(char c){
-        return switch (c) {
-            case '+', '-' -> 1;
-            case '*', '/' -> 2;
-            case '^' -> 3;
-            default -> -1;
-        };
+        switch (c)
+        {
+            case '+':
+            case '-':
+                return 1;
+
+            case '*':
+            case '/':
+                return 2;
+
+            case '^':
+                return 3;
+        }
+        return -1;
+
     }
 
     static String infixToPostFix(String expression){
@@ -19,7 +28,7 @@ public class InfixToPostfix {
         for (int i = 0; i <expression.length() ; i++) {
             char c = expression.charAt(i);
 
-            //check if char is operator
+
             if(precedence(c)>0){
                 while(stack.isEmpty()==false && precedence(stack.peek())>=precedence(c)){
                     postfix += stack.pop();
@@ -34,7 +43,6 @@ public class InfixToPostfix {
             }else if(c=='('){
                 stack.push(c);
             }else{
-                //character is neither operator nor (
                 postfix += c;
             }
         }
