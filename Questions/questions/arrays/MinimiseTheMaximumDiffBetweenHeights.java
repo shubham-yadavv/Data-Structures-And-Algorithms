@@ -1,5 +1,4 @@
 import java.util.Arrays;
-//Minimize the maximum difference between the heights
 public class MinimiseTheMaximumDiffBetweenHeights {
 
 
