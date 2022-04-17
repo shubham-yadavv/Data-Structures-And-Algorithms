@@ -1,9 +1,7 @@
 import java.util.Arrays;
 
 public class Rotate {
-    static void rotate(int[] arr)
-    {
-
+    static void rotate(int[] arr) {
         int x = arr[arr.length-1];
         for (int i = arr.length-1; i > 0; i--) {
             arr[i] = arr[i-1];
