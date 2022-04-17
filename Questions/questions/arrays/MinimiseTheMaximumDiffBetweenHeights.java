@@ -1,6 +1,6 @@
 import java.util.Arrays;
-public class MinimiseTheMaximumDiffBetweenHeights {
 
+public class MinimiseTheMaximumDiffBetweenHeights {
 
   public static void main(String[] args) {
     int[] arr = {6,10};
