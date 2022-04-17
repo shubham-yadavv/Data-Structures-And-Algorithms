@@ -22,7 +22,7 @@ public class TrappingWaterProblem {
     }
 
 
-    static int trap(int[] arr, int n){     // time complexity = O(n^2), sapce complexity = O(1)
+    static int trap(int[] arr, int n){     // time complexity = O(n^2), space complexity = O(1)
         int water = 0;
         for (int i = 1; i < n - 1; i++) {
             int left = arr[i];
