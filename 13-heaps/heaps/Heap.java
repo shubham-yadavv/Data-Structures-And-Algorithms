@@ -73,12 +73,16 @@ class Heap {
         h.insert(array, 9);
         h.insert(array, 5);
         h.insert(array, 2);
+        h.insert(array, 1);
+        h.insert(array, 10);
 
         System.out.println("Max-Heap array: ");
         h.printArray(array, size);
 
-        h.deleteNode(array, 4);
+        h.deleteNode(array, 10);
         System.out.println("After deleting an element: ");
         h.printArray(array, size);
     }
+
+
 }
