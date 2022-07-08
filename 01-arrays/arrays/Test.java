@@ -1,21 +1,27 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Test {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[][] arr = new int[3][];
+    public static int main(String[] args) {
+        int x = 16;
+        if (x == 0 || x == 1){
+            return x;
+        }
 
-        System.out.println(arr.length);
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = sc.nextInt();
+        int start = 0, end = x;
+        while (start < end) {
 
+            int mid = start + (end - start) / 2;
+
+            if (mid > x / mid) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+
+                if (start > x / start) {
+                    return mid;
+                }
             }
         }
-        for (int[] num : arr){
-            System.out.println(Arrays.toString(num));
 
-        }
+        return start;
+
     }
 }
