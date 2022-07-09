@@ -1,15 +1,11 @@
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int[] arr = {2,4,6,8,10,12,14,16,18,20};
+        int[] arr = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
         int target = 16;
         int ans = binarySearch(arr, target);
         System.out.println(ans);
-
-
-
     }
-
 
     public static int binarySearch(int[] arr, int target) {
         int start = 0;
