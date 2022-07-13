@@ -1,11 +1,12 @@
 ### Easy
 1. [Build Array from Permutation](BuildArrayfromPermutation.java)
-2. [Concatenation of Array](ConcatenationofArray.java)
+2. [Concatenation of Array](ConcetationofArray.java)
 3. [Running Sum of 1d Array](RunningSumof1dArray.java)
 4. [Richest Customer Wealth](RichestCustomerWealth.java)
 5. [Shuffle the Array](ShuffletheArray.java)
 6. [Kids With the Greatest Number of Candies](GreatestNumberofCandies.java)
-7. [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/)
+7. [Number of Good Pairs](NumberofGoodPairs.java)
+
 8. [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
 9.  [Create Target Array in the Given Order](https://leetcode.com/problems/create-target-array-in-the-given-order/)
 10. [Check if the Sentence Is Pangram](https://leetcode.com/problems/check-if-the-sentence-is-pangram/)
