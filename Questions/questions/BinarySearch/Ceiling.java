@@ -9,8 +9,8 @@ public class Ceiling {
 
     }
 
-    // returns the index of the first element in arr that is greater than or equal
-    // to target
+    // returns the index of the first element in arr that is greater than or equa to
+    // target
     static int ceiling(int[] arr, int target) {
 
         if (target > arr[arr.length - 1]) {
