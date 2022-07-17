@@ -1,67 +1,43 @@
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FirstAndLastPos {
-    public static int lastPos(int[] arr, int target, int n) {
-        int start = 0;
-        int end = n - 1;
+    public static int[] searchRange(int[] nums, int target) {
+
+        int[] ans = { -1, -1 };
+        int first = search(nums, target, true);
+        int last = search(nums, target, false);
+        ans[0] = first;
+        ans[1] = last;
+        return ans;
+    }
+
+    static int search(int[] nums, int target, boolean firstIndex) {
         int ans = -1;
-
+        int start = 0;
+        int end = nums.length - 1;
         while (start <= end) {
-
             int mid = start + (end - start) / 2;
-            for (int i = start; i < end; i++) {
-                if (target == arr[mid]) {
-                    end = mid - 1;
-                    ans = mid;
-                } else if (target < arr[mid]) {
+            if (target < nums[mid]) {
+                end = mid - 1;
+            } else if (target > nums[mid]) {
+                start = mid + 1;
+            } else {
+                ans = mid;
+                if (firstIndex) {
                     end = mid - 1;
                 } else {
                     start = mid + 1;
                 }
-
             }
         }
+
         return ans;
-    }
-
-    public static int FistPos(int[] arr, int target, int n) {
-        int start = 0;
-        int end = n - 1;
-        int ans = -1;
-
-        while (start <= end) {
-
-            int mid = start + (end - start) / 2;
-            for (int i = start; i < end; i++) {
-                if (target == arr[mid]) {
-                    start = mid + 1;
-                    ans = mid;
-                } else if (target < arr[mid]) {
-                    end = mid - 1;
-                } else {
-                    start = mid + 1;
-                }
-
-            }
-        }
-        return ans;
-    }
-
-    public static ArrayList<Integer> ans(int[] arr, int target, int n) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
-
-        list.add(FistPos(arr, target, n));
-        list.add(lastPos(arr, target, n));
-
-        return list;
     }
 
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 3, 3, 5, 7 };
-        int n = arr.length;
         int target = 3;
-
-        System.out.println(ans(arr, target, n));
+        System.out.println(Arrays.toString(searchRange(arr, target)));
 
     }
 
