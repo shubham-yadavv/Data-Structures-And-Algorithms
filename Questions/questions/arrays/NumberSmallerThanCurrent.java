@@ -19,9 +19,34 @@ public class NumberSmallerThanCurrent {
         return ans;
     }
 
+    // optimised solution
+    public static int[] smallerNumbersThanCurrent1(int[] nums) {
+        int[] ans = new int[nums.length];
+        int[] temp = new int[101];
+
+        for (int i = 0; i < nums.length; i++) {
+            temp[nums[i]]++;
+        }
+
+        for (int i = 1; i <= 100; i++) {
+            temp[i] += temp[i - 1];
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                ans[i] = 0;
+            } else {
+                ans[i] = temp[nums[i] - 1];
+            }
+
+        }
+
+        return ans;
+    }
+
     public static void main(String[] args) {
         int[] arr = { 8, 1, 2, 2, 3 };
-        System.out.println(Arrays.toString(smallerNumbersThanCurrent(arr)));
+        System.out.println(Arrays.toString(smallerNumbersThanCurrent1(arr)));
 
     }
 }
