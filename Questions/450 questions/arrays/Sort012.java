@@ -17,15 +17,15 @@ public class Sort012 {
 
         int i = 0;
 
-        while (c0 > 0){
+        while (c0 > 0) {
             arr[i++] = 0;
             c0--;
         }
-        while (c1 > 0){
+        while (c1 > 0) {
             arr[i++] = 1;
             c1--;
         }
-        while (c2 > 0){
+        while (c2 > 0) {
             arr[i++] = 2;
             c2--;
         }
@@ -36,9 +36,7 @@ public class Sort012 {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2,0,1,2,0,1};
+        int[] arr = { 2, 0, 1, 2, 0, 1 };
         sort(arr);
     }
 }
-
-
