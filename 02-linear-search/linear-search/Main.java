@@ -32,11 +32,9 @@ public class Main {
             if (arr[i] == target) {
                 return i;
             }
-
         }
         return -1;
     }
-
 }
 
 // time complexity: O(n)

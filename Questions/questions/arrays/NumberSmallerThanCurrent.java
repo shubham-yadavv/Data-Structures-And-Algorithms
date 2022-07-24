@@ -20,6 +20,7 @@ public class NumberSmallerThanCurrent {
     }
 
     // optimised solution
+    // time complexity : O(n)
     public static int[] smallerNumbersThanCurrent1(int[] nums) {
         int[] ans = new int[nums.length];
         int[] temp = new int[101];

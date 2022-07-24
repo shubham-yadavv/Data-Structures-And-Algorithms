@@ -19,6 +19,5 @@ public class Main {
 
             System.out.println("value for key" + " \"vishal\" is:- " + a);
         }
-
     }
 }
