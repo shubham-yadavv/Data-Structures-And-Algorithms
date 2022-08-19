@@ -3,7 +3,7 @@
 import java.util.Arrays;
 
 public class SelectionSort {
-    void selectionSort(int[] array) {
+    static void selectionSort(int[] array) {
         int size = array.length;
 
         for (int step = 0; step < size - 1; step++) {
@@ -24,8 +24,7 @@ public class SelectionSort {
 
     public static void main(String args[]) {
         int[] data = { 20, 12, 10, 15, 2 };
-        SelectionSort ss = new SelectionSort();
-        ss.selectionSort(data);
+
         System.out.println("Sorted Array in Ascending Order: ");
         System.out.println(Arrays.toString(data));
     }
