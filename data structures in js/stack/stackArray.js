@@ -1,5 +1,3 @@
-// stack using array
-
 class Stack {
     constructor(){
         this.MAX = 101
@@ -19,13 +17,13 @@ class Stack {
     }
 
     pop(){
-        if(this.top < 0){
+        if(this.top == -1){
             return "Stack is empty"
         }
         else{
-            let temp = this.array[this.top]
+
             this.top--
-            return temp
+
         }
     }
 
@@ -43,17 +41,18 @@ class Stack {
     }
 
     size(){
-        return this.top + 1
+        return this.top + 1;
     }
 
     clear(){
-        this.top = -1
+        this.top = -1;
     }
 
     print(){
         let temp = this.top
         while(temp >= 0){
             console.log(this.array[temp])
+
             temp--
         }
     }
@@ -75,10 +74,10 @@ stck.push(1)
 stck.push(2)
 stck.push(3)
 stck.push(4)
-// stck.push(7)
-// stck.push(6)
-// stck.push(4)
-// stck.push(9)
+stck.push(7)
+stck.push(6)
+stck.push(4)
+stck.push(9)
 
 
 
@@ -86,8 +85,10 @@ stck.pop()
 
 
 console.log(stck.peek())
-console.log(stck.isEmpty())
-console.log(stck.size())
-console.log(stck.reverse())
-stck.clear()
-console.log(stck.isEmpty())
+// console.log(stck.isEmpty())
+// console.log(stck.size())
+// console.log(stck.reverse())
+// // stck.clear()
+// // console.log(stck.isEmpty())
+
+// stck.print()
