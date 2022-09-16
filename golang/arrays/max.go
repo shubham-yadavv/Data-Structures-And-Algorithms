@@ -1,5 +1,3 @@
-// mac val in arr
-
 package main
 
 import (

@@ -1,5 +1,3 @@
-// linked list in golang
-
 package main
 
 import (
@@ -17,71 +15,80 @@ type LinkedList struct {
 	size int
 }
 
-// class
-func (l *LinkedList) Add(data int) {
-	newNode := &Node{data: data}
-	if l.head == nil {
-		l.head = newNode
-	} else {
-		l.tail.next = newNode
+func (l *LinkedList) insertFirst(data int) {
+	node := &Node{data: data}
+	node.next = l.head
+	l.head = node
+
+	if l.tail == nil {
+		l.tail = l.head
 	}
-	l.tail = newNode
+
 	l.size++
 }
 
-func (l *LinkedList) Remove(data int) {
-	if l.head == nil {
+func (l *LinkedList) insertLast(data int) {
+	if l.tail == nil {
+		l.insertFirst(data)
 		return
 	}
-	if l.head.data == data {
-		l.head = l.head.next
-		l.size--
+
+	node := &Node{data: data}
+	l.tail.next = node
+	l.tail = node
+	l.size++
+}
+
+func (l *LinkedList) insertAt(data int, index int) {
+	if index < 0 || index > l.size {
+		fmt.Println("Index out of bounds")
 		return
 	}
-	current := l.head
-	for current.next != nil {
-		if current.next.data == data {
-			current.next = current.next.next
-			l.size--
-			return
-		}
-		current = current.next
+
+	if index == 0 {
+		l.insertFirst(data)
+		return
 	}
+
+	if index == l.size {
+		l.insertLast(data)
+		return
+	}
+
+	node := &Node{data: data}
+	prev := l.head
+	for i := 0; i < index-1; i++ {
+		prev = prev.next
+	}
+
+	node.next = prev.next
+	prev.next = node
+	l.size++
 }
 
-func (l *LinkedList) Contains(data int) bool {
-	if l.head == nil {
-		return false
-	}
-	current := l.head
-	for current != nil {
-		if current.data == data {
-			return true
-		}
-		current = current.next
-	}
-	return false
-}
+func (l *LinkedList) printList() {
 
-func (l *LinkedList) Print() {
-	current := l.head
-	for current != nil {
-		fmt.Printf("%d ", current.data)
-		current = current.next
+	node := l.head
+	for node != nil {
+		fmt.Print(node.data)
+		fmt.Print("->")
+		node = node.next
 	}
-	fmt.Println()
+	fmt.Println("nil")
 }
 
 func main() {
-	l := &LinkedList{}
-	l.Add(1)
-	l.Add(2)
-	l.Add(3)
-	l.Add(4)
-	l.Add(5)
-	l.Print()
-	l.Remove(3)
-	l.Print()
-	fmt.Println(l.Contains(3))
-	fmt.Println(l.Contains(4))
+
+	list := LinkedList{}
+	list.size = 0
+
+	list.insertFirst(69)
+	list.insertAt(2, 1)
+	list.insertAt(3, 2)
+	list.insertAt(4, 3)
+	list.insertAt(5, 4)
+	list.insertAt(6, 5)
+	list.insertLast(100)
+
+	list.printList()
 }

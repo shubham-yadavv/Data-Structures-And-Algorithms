@@ -1,6 +1,6 @@
 import Node from "./node";
 
-class LinkedList {
+class LL {
   private head: Node;
   private tail: Node;
   private size: number = 0;
@@ -108,12 +108,4 @@ class LinkedList {
   }
 }
 
-let list = new LinkedList();
-list.insertFirst(15);
-list.insertFirst(11);
-list.insertFirst(8);
-list.insertFirst(5);
-list.insertLast(100);
-list.insertAt(69, 0);
-list.display();
-
+export default LL;
