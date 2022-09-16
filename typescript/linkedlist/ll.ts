@@ -1,87 +1,119 @@
-class Node {
-    value: number;
-    next: Node;
-    constructor(value: number) {
-        this.value = value;
-        this.next = null;
-    }
-
-}
+import Node from "./node";
 
 class LinkedList {
-    head: Node;
-    tail: Node;
-    size: number;
+  private head: Node;
+  private tail: Node;
+  private size: number = 0;
 
-    public inserFirst(val: number): void {
+  public insertFirst(val: number): void {
+    let node = new Node(val);
+    node.next = this.head;
+    this.head = node;
 
-          let node= new Node(val);
-          node.next = this.head;
-          this.head = node;
+    if (this.tail == null) {
+      this.tail = this.head;
+    }
+    this.size++;
+  }
 
-          if(this.tail == null){
-                this.tail = this.head;
-
-          }
-          this.size++;
-        
+  public insertLast(val: number): void {
+    if (this.tail == null) {
+      this.insertFirst(val);
+      return;
     }
 
-    public insertLast(val: number): void {
-        if(this.tail == null){
-            this.inserFirst(val);
-            return;
-        }
+    let node = new Node(val);
+    this.tail.next = node;
+    this.tail = node;
+    this.size++;
+  }
 
-        let node = new Node(val);
-        this.tail.next = node;
-        this.tail = node;
-        this.size++;
+  // insert at index
+  public insertAt(val: number, index: number): void {
+    if (index == 0) {
+      this.insertFirst(val);
+      return;
     }
 
-
-    public insertAt(val: number, index: number): void {
-        if(index  == 0){
-            this.inserFirst(val);
-            return;
-        }
-        if(index == this.size){
-            this.insertLast(val);
-            return;
-        }
-
-        // temp node
-        let temp: Node = this.head;
-        for(let i = 0; i < index - 1; i++){
-            temp = temp.next;
-        }
-        let node = new Node(val);
-        temp.next = node;
-        this.size++;
-
-    }
-        
-
-    //print 
-    public print(): void {
-        let current = this.head;
-        while (current) {
-            console.log(current.value);
-            current = current.next;
-        }
+    if (index == this.size) {
+      this.insertLast(val);
+      return;
     }
 
+    let node = new Node(val);
+    let temp = this.get(index - 1);
+    node.next = temp.next;
+    temp.next = node;
+    this.size++;
+  }
+
+  public deleteFirst(): number {
+    let val: number = this.head.val;
+    if (this.head == null) {
+      return;
+    }
+
+    this.head = this.head.next;
+    this.size--;
+    return val;
+  }
+
+  public deleteLast(): number{
+    let val: number = this.tail.val;
+
+    if(this.size<=1){
+        this.deleteFirst();
+    }
     
+    let secondlast: Node = this.get(this.size -2)
+    this.tail = secondlast;
+    this.tail.next = null
+    
+    return val;
+  }
+
+    public deleteAt(index: number): number {
+      if (index == 0) {
+        this.deleteFirst();
+      }
+
+      if (index === this.size - 1) {
+        this.deleteLast();
+      }
+
+      let prev: Node = this.get(index - 1);
+      let val: number = prev.next.val;
+      prev.next = prev.next.next;
+      this.size--;
+      return val;
+    }
+
+  public get(index: number): Node {
+    let temp = this.head;
+    for (let i = 0; i < index; i++) {
+      temp = temp.next;
+    }
+    return temp;
+  }
+
+  public display(): void {
+    let temp = this.head;
+    while (temp != null) {
+      console.log(temp.val);
+      console.log("|");
+      temp = temp.next;
+    }
+
+    console.log("null");
+  }
 }
 
 let list = new LinkedList();
-list.inserFirst(6)
-list.inserFirst(5);
-list.inserFirst(3);
-list.insertLast(1);
-
-
-list.print();
-
-export{}
+list.insertFirst(15);
+list.insertFirst(11);
+list.insertFirst(8);
+list.insertFirst(5);
+list.insertLast(100);
+list.insertAt(69, 0);
+list.display();
 

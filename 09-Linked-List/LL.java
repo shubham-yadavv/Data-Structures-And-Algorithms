@@ -42,7 +42,6 @@ public class LL {
         }
         Node node = new Node(val, temp.next);
         temp.next = node;
-        node.next = temp.next;
         size++;
 
     }
