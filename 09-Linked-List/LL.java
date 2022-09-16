@@ -4,8 +4,7 @@ public class LL {
     private Node tail;
     private int size = 0;
 
-
-    public void insertFirst(int val) {      // insert node at first
+    public void insertFirst(int val) { // insert node at first
         Node node = new Node(val);
         node.next = head;
         head = node;
@@ -13,10 +12,10 @@ public class LL {
         if (tail == null) {
             tail = head;
         }
-        size += 1;
+        size++;
     }
 
-    public void insertLast(int val) {       // insert node at last
+    public void insertLast(int val) { // insert node at last
         if (tail == null) {
             insertFirst(val);
             return;
@@ -28,7 +27,7 @@ public class LL {
         size++;
     }
 
-    public void insert(int val, int index) {        // insert node at a particular index
+    public void insert(int val, int index) { // insert node at a particular index
         if (index == 0) {
             insertFirst(val);
             return;
@@ -43,14 +42,15 @@ public class LL {
         }
         Node node = new Node(val, temp.next);
         temp.next = node;
+        node.next = temp.next;
         size++;
 
     }
 
-    public int deleteFirst() {      // delete the first node
+    public int deleteFirst() { // delete the first node
         int val = head.value;
         head = head.next;
-        if (head == null){
+        if (head == null) {
             tail = null;
         }
         size--;
@@ -58,7 +58,7 @@ public class LL {
 
     }
 
-    public int deleteLast() {            // delete the last node
+    public int deleteLast() { // delete the last node
         if (size <= 1) {
             return deleteFirst();
         }
@@ -69,7 +69,7 @@ public class LL {
         return val;
     }
 
-    public int delete(int index) {      // delete the particular node
+    public int delete(int index) { // delete the particular node
         if (index == 0) {
             return deleteFirst();
         }
@@ -85,7 +85,7 @@ public class LL {
         return val;
     }
 
-    public Node find(int value) {       // find the node for the particular value
+    public Node find(int value) { // find the node for the particular value
         Node node = head;
         while (node != null) {
             if (node.value == value) {
@@ -96,14 +96,13 @@ public class LL {
         return null;
     }
 
-    public Node get(int index) {         // get the reference pointer of the node
+    public Node get(int index) { // get the reference pointer of the node
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;
         }
         return node;
     }
-
 
     public void display() {
         Node temp = head;
@@ -115,7 +114,7 @@ public class LL {
         System.out.println("END");
     }
 
-    private class Node {            // creating a node
+    private class Node { // creating a node
         private int value;
         private Node next;
 
