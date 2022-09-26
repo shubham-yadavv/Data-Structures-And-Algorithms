@@ -66,6 +66,64 @@ func (l *LinkedList) insertAt(data int, index int) {
 	l.size++
 }
 
+func (l *LinkedList) deleteFirst() int {
+	var value int = l.head.data
+	if l.head == nil {
+		return -1
+	}
+
+	l.head = l.head.next
+	l.size--
+	return value
+
+}
+
+func (l *LinkedList) deleteLast() int {
+	var val int = l.tail.data
+	if l.size <= 1 {
+		l.deleteFirst()
+	}
+	var secondlast *Node = l.get(l.size - 2)
+	l.tail = secondlast
+	l.tail.next = nil
+
+	l.size--
+
+	return val
+
+}
+
+func (l *LinkedList) deleteAt(index int) int {
+	if index < 0 || index >= l.size {
+		fmt.Println("Index out of bounds")
+		return -1
+	}
+
+	if index == 0 {
+		return l.deleteFirst()
+	}
+
+	if index == l.size-1 {
+		return l.deleteLast()
+	}
+
+	prev := l.get(index - 1)
+	value := prev.next.data
+	prev.next = prev.next.next
+	l.size--
+	return value
+}
+
+func (l *LinkedList) get(index int) *Node {
+	temp := l.head
+	for i := 0; i < index; i++ {
+		temp = temp.next
+	}
+
+	return temp
+
+}
+
 func (l *LinkedList) printList() {
 
 	node := l.head
@@ -78,17 +136,17 @@ func (l *LinkedList) printList() {
 }
 
 func main() {
+	ll := &LinkedList{}
+	ll.insertFirst(1)
+	ll.insertFirst(2)
+	ll.insertFirst(3)
+	ll.insertFirst(4)
+	ll.insertFirst(5)
+	ll.insertLast(6)
+	ll.insertAt(7, 2)
 
-	list := LinkedList{}
-	list.size = 0
-
-	list.insertFirst(69)
-	list.insertAt(2, 1)
-	list.insertAt(3, 2)
-	list.insertAt(4, 3)
-	list.insertAt(5, 4)
-	list.insertAt(6, 5)
-	list.insertLast(100)
-
-	list.printList()
+	ll.deleteFirst()
+	ll.deleteLast()
+	ll.deleteAt(2)
+	ll.printList()
 }
