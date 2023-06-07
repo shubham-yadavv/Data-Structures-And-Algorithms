@@ -7,5 +7,6 @@ def linear_search(arr, target):
 if __name__ == "__main__":
     arr = [1, 2, 3, 4, 5, 6]
     target = 4
-    print(linear_search(arr, target))
+    ans = linear_search(arr, target)
+    print("target found at index: ", ans)
 
