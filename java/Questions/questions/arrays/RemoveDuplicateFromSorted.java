@@ -17,10 +17,3 @@ public class RemoveDuplicateFromSorted {
         System.out.println(removeDuplicates(arr));
     }
 }
-
-/*
- * arr = 0 0 1 1 2 2 3 3 4 4
- * k = 5
- * 
- * arr = 0 1 2 3 4 _ _ _ _ _
- */

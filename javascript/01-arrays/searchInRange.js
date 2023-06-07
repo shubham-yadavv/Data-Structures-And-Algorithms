@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function linearSearch1(arr, target, start, end) {
     if (arr.length === 0) {
         return -1;

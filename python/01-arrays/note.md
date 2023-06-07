@@ -1,0 +1,4 @@
+- python's typle is similar to array in java
+- python's list is similar to arraylist in java
+- python's set is similar to hashset in java
+- python's dictionary is similar to hashmap in java

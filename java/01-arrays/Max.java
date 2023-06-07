@@ -24,6 +24,7 @@ public class Max {
         }
         return maxVal;
     }
+    // ans = 9
 
     static int max(int[] arr) {
         if (arr.length == 0) {

@@ -1,5 +1,3 @@
-// string in js
-
 
 function string(words){
     let sentence = "";

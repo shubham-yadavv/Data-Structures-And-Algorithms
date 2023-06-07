@@ -15,10 +15,10 @@ class LinkedList {
 	
 	add(element) {
 		
-		var node = new Node(element);
+		let node = new Node(element);
 
 		
-		var current;
+		let current;
 
 		
 		if (this.head == null)
@@ -43,17 +43,17 @@ class LinkedList {
 			return console.log("Please enter a valid index.");
 		else {
 			
-			var node = new Node(element);
-			var curr, prev;
+			let node = new Node(element);
+			let  prev;
 
-			curr = this.head;
+			let curr = this.head;
 
 			if (index == 0) {
 				node.next = this.head;
 				this.head = node;
 			} else {
 				curr = this.head;
-				var it = 0;
+				let it = 0;
 
 				
 				while (it < index) {
@@ -75,7 +75,7 @@ class LinkedList {
 		if (index < 0 || index >= this.size)
 			return console.log("Please Enter a valid index");
 		else {
-			var curr, prev, it = 0;
+			let curr, prev, it = 0;
 			curr = this.head;
 			prev = curr;
 
@@ -102,8 +102,8 @@ class LinkedList {
 
 	
 	removeElement(element) {
-		var current = this.head;
-		var prev = null;
+		let current = this.head;
+		let prev = null;
 
 		
 		while (current != null) {
@@ -126,8 +126,8 @@ class LinkedList {
 
 
 	indexOf(element) {
-		var count = 0;
-		var current = this.head;
+		let count = 0;
+		let current = this.head;
 
 		while (current != null) {
 			
@@ -152,8 +152,8 @@ class LinkedList {
 
 
 	printList() {
-		var curr = this.head;
-		var str = "";
+		let curr = this.head;
+		let str = "";
 		while (curr) {
 			str += curr.element + " ";
 			curr = curr.next;
@@ -164,7 +164,7 @@ class LinkedList {
 }
 
 
-var ll = new LinkedList();
+let ll = new LinkedList();
 
 
 console.log(ll.isEmpty());
