@@ -1,4 +1,4 @@
-# Data-Structures-And-Algorithms
+# 🔭Data-Structures-And-Algorithms
 
 [array](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/01-arrays/arrays)
 
