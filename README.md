@@ -1,22 +1,42 @@
-# 🔭Data-Structures-And-Algorithms
+#🔭 Data Structures and Algorithms
 
-[array](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/01-arrays/arrays)
+Welcome to the Data Structures and Algorithms repository, where you can find various implementations and explanations of common data structures and algorithms in different programming languages.
 
-[linear-search](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/02-linear-search/linear-search)
+## Arrays
+- [Array](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/01-arrays/arrays)
 
-[binary-search](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/03-binary%20search/binary-search)
+## Searching Algorithms
+- [Linear Search](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/02-linear-search/linear-search)
+- [Binary Search](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/03-binary%20search/binary-search)
 
-[sorting algorithms](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/04-sorting/sorting)
-    : bubble sort, insertion sort, selection sort, merge sort, quick sort
+## Sorting Algorithms
+- [Sorting Algorithms](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/04-sorting/sorting)
+  - Bubble Sort
+  - Insertion Sort
+  - Selection Sort
+  - Merge Sort
+  - Quick Sort
 
-[linked list](https://github.com/shubham-yadavv/Data-Structures-And-Algorithms/tree/main/09-Linked-List/linked-list/linked_list)
-    : single linked list, double linked list, circular linked list
+## Linked Lists
+- [Linked List](https://github.com/shubham-yadavv/Data-Structures-And-Algorithms/tree/main/09-Linked-List/linked-list/linked_list)
+  - Single Linked List
+  - Double Linked List
+  - Circular Linked List
 
-[stack](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/11-stack/stack)
-    : array implementation, infix to postfix converison.
+## Stacks
+- [Stack](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/11-stack/stack)
+  - Array Implementation
+  - Infix to Postfix Conversion
 
-[queue](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/11-queue)
-    : array implementation.
+## Queues
+- [Queue](https://github.com/shubh22121/Data-Structures-And-Algorithms/tree/main/11-queue)
+  - Array Implementation
 
-[trees](https://github.com/shubham-yadavv/Data-Structures-And-Algorithms/tree/main/12-trees/trees)
-    : binray tree, binary search tree, DFS, BFS.
+## Trees
+- [Trees](https://github.com/shubham-yadavv/Data-Structures-And-Algorithms/tree/main/12-trees/trees)
+  - Binary Tree
+  - Binary Search Tree
+  - Depth-First Search (DFS)
+  - Breadth-First Search (BFS)
+
+Feel free to explore the individual folders for detailed explanations and code implementations. Happy learning!
